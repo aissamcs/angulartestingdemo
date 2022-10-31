@@ -28,7 +28,7 @@ describe('UnittestComponent', () => {
     const fixture = TestBed.createComponent(UnittestComponent);
     const component = fixture.componentInstance;
     // TODO: Fix the issue 
-    expect(component.getLanguage()).toEqual('Java');
+    expect(component.getLanguage()).toEqual('Angular');
   });
 
 });

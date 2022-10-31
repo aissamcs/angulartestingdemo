@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UnittestComponent implements OnInit {
   private language = 'Angular';
+  public isSolved = false;
 
   constructor() { }
 

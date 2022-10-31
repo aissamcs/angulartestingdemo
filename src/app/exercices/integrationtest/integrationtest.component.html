@@ -94,32 +94,44 @@
             <span>Many frameworks (Jasmine, Jest)</span>
         </button>
 
+        <button class="card card-small" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+            </svg>
+            <span>Karma Test Runner & Webpack code bundle</span>
+        </button>
 
     </div>
 
+    <h2>Application</h2>
+    <img width="400" width="400" alt="Angular Logo" src="../../../assets/app.png" />
+
     <!-- Next Steps -->
-    <h2>Next Steps</h2>
-    <p>Open 'integration.component.spec.ts' and fix failing test (TODO in VS Code)?</p>
+    <h2>Next Steps (Exercises)</h2>
+    <p>Open integration test exercise: <a href="https://stackblitz.com/edit/node-rrewyo?file=integration-test" target="_blank" rel="noopener">Here</a></p>
+    <p>Edit 'app.component.spec.ts' to fix failing test (TODO section)?</p>
 
     <!-- Terminal -->
     <div class="terminal">
+        <pre>cd integration-test</pre>
         <pre>npm install</pre>
         <pre>ng test</pre>
-        <pre>Open browser: http://localhost:9876/</pre>
+        <pre>ng test --code-coverage</pre>
     </div>
 
     <!-- Next Steps -->
     <h2>Solution <a style="color:'green';cursor:pointer;" (click)="isSolved = true"><u>here</u></a></h2>
     
-    <p *ngIf="isSolved">Open 'integration.component.spec.ts' and fix failing test (TODO in VS Code) as follows</p>
+    <p *ngIf="isSolved">Open 'app.component.spec.ts' and fix failing test (TODO) as follows</p>
 
     <!-- Terminal -->
     <div class="terminal" *ngIf="isSolved">
-        <pre>// TODO: Fix the issue         </pre>
-        <pre>expect(compiled.querySelector('.content span')?.textContent)
-        .toContain(
-            'Exercise: Integration Test Definition !'
-        );</pre>
+        <pre>
+const expectedValueTemplate = 'count=1'; // fix here 
+const templateCountDisplay = debugElement.query(By.css('h1'));
+const actualValueTemplate = templateCountDisplay.nativeElement.textContent;
+expect(actualValueTemplate).toBe(expectedValueTemplate);
+        </pre>
     </div>
 
     <!-- Footer -->
